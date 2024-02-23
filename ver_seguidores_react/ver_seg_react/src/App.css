@@ -1,0 +1,70 @@
+.fw-card{
+  display: flex;
+  background-color: #242526;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 700px;
+}
+.fw-card-header{
+  display: flex;
+  align-items: center;
+}
+.fw-card-img{
+  border-radius: 999px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+.fw-card-user{
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+}
+.fw-card-plus-btn{
+  color: rgb(255, 255, 255);
+  padding-right: 20px;
+}
+.fw-card-btn-add{
+  cursor: pointer;
+  background-color: #3a3b3c;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size:small;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.fw-card-btn-elim:hover{
+  border: 1px solid rgb(117, 0, 0);
+  border-color: rgb(117, 0, 0);
+  background-color: rgba(117, 0, 0, 0.308);
+}
+.fw-card-date{
+  background-color: #00000000;
+  color: white;
+  border: none;
+  appearance: none;
+}
+.fw-card-date::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.blanco{
+  color: white;
+  background-color: #3a3b3c;
+  padding: 20px;
+  font-size:x-large;
+}
+.colorPrueba{
+  color: white;
+  text-align: center;
+}
+.img-width{
+  width: 800px;
+  height: 300px;
+}
+.fanPage-title{
+  display: flex;
+  justify-content: space-around;
+}

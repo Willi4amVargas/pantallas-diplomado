@@ -1,0 +1,19 @@
+Seguidor{
+	-Codigo Seguidor(NEC)
+	-Fecha de Seguimiento(NEC)
+	-Persona(NEC)
+	-Fan Page(NEC)
+	-Estatus(NEC)
+}
+Publicacion{
+	-Codigo Publicacion(NEC)
+	-Fecha de publicacion(NEC)
+	-Titulo de la publicacion(NEC)
+	-Descripcion de la publicacion(NEC)
+	-Ciudad(OPC)
+	-Persona de la publicacion(NEC)
+	-Tipo de Acontecimiento(OPC)
+	-Fan Page(NEC)
+	-Estatus(NEC)
+}
+	
