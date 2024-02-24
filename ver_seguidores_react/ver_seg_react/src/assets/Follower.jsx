@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus,faXmark} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
-export function Follower({children}) {
+export function Follower({children,date}) {
     const [friend,editFriend]=useState(true);
     const buttonText=friend?"Añadir Amigo":"Eliminar Amigo"
     const buttonClassName = friend?'fw-card-btn-add':'fw-card-btn-add fw-card-btn-elim'
@@ -18,7 +18,12 @@ export function Follower({children}) {
                 />
                 <div className="fw-card-user">
                     <strong>{children}</strong>
-                    <input type="date" className='fw-card-date'/>
+                    <input 
+                        type="date" 
+                        className='fw-card-date'
+                        value={date} 
+                        disabled
+                    />
                 </div>
             </header>
             <aside className='fw-card-asside'>

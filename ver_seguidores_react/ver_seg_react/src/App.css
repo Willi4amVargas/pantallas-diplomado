@@ -34,12 +34,20 @@
   padding: 10px 20px;
   margin-right: 20px;
   border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.fw-card-btn-add:hover{
+  border: 1px solid rgba(18, 167, 31, 0.603);
+  background-color: rgba(18, 167, 30, 0.24);
+  color: rgb(226, 209, 209);
+  transition: all 0.18s ease-in;
 }
 
 .fw-card-btn-elim:hover{
   border: 1px solid rgb(117, 0, 0);
   border-color: rgb(117, 0, 0);
   background-color: rgba(117, 0, 0, 0.308);
+  transition: all 0.18s ease;
 }
 .fw-card-date{
   background-color: #00000000;
@@ -50,21 +58,88 @@
 .fw-card-date::-webkit-calendar-picker-indicator {
   display: none;
 }
-.blanco{
+
+.fanPage{
   color: white;
-  background-color: #3a3b3c;
-  padding: 20px;
-  font-size:x-large;
+  display: flex;
+  flex-direction: column;
 }
-.colorPrueba{
-  color: white;
-  text-align: center;
-}
-.img-width{
-  width: 800px;
+.fanPage-img{
+  width: 900px;
   height: 300px;
 }
 .fanPage-title{
   display: flex;
+  flex-direction: column;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #3a3b3c;
+  padding-left: 80px;
+}
+.fanPage-name-title{
+  font-weight: bold;
+  font-size:x-large;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+.fanPage-name-title:hover{
+  padding-left: 5px;
+  text-shadow: -8px 2px rgba(49, 49, 49, 0.747);
+  transition: all 0.2s ease;
+}
+.fanPage-numb-followers{
+  padding-left: 80px;
+  color: #1a1a1ac5;
+}
+.addFollow{
+  display: flex;
   justify-content: space-around;
+  background-color: #636464;
+  padding: 3vh 0px;
+}
+.addFollow-input{
+  background-color: #292929;
+  color: rgba(255, 255, 255, 0.774);
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  width: 300px;
+  height: 20px;
+  outline: none;
+  padding-left: 10px;
+  box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
+  z-index: 1;
+}
+.addFollow-container-input{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.addFollow-label{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(129, 129, 129), 0 0 1em rgb(109, 109, 109), 0 0 0.2em rgb(44, 44, 44);
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.addFollow-btn{
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+}
+.addFollow-btn-icon{
+  width: 40px;
+  height: auto;
+}
+.addFollow-input-date{
+  background-color: #777777;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+  box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
+  z-index: 1;
+}
+.listFollow-noFollowers{
+  text-align: center;
+  color: aliceblue;
+}
+.listFollow-noFollowers:hover{
+  text-shadow: 4px 4px black;
+  transition: 0.1s all;
 }

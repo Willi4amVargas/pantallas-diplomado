@@ -1,13 +1,14 @@
 export function Cabecera({fanPage,nroSeguidores}){
+    const seguidores=<span style={{fontWeight:"bold"}}>Seguidores</span>
 
     return(
-        <section className="colorPrueba">
+        <section className="fanPage">
             <article>
-                <img src="https://random.imagecdn.app/500/150" className="img-width"/>
+                <img src="https://random.imagecdn.app/500/150" className="fanPage-img"/>
             </article>
             <aside className="fanPage-title">
-                <h1>{fanPage}</h1>
-                <h4>{nroSeguidores}</h4>
+                <span className="fanPage-name-title">{fanPage}</span>
+                <span className="fanPage-numb-followers">{seguidores} {nroSeguidores}</span>
             </aside>
         </section>
     )
