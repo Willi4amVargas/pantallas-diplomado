@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus,faXmark} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
-export function Follower({children,date}) {
+export function Follower({children,date,follow,elimFollower,changePages}) {
     const [friend,editFriend]=useState(true);
     const buttonText=friend?"Añadir Amigo":"Eliminar Amigo"
     const buttonClassName = friend?'fw-card-btn-add':'fw-card-btn-add fw-card-btn-elim'
@@ -28,7 +28,18 @@ export function Follower({children,date}) {
                 </div>
             </header>
             <aside className='fw-card-asside'> 
-                <button className={buttonClassName} onClick={buttonOnClick}>
+                {changePages==4?
+                    <button
+                    className='fw-card-elimFw-btn' 
+                        onClick={()=>elimFollower(follow.id)
+                    }>
+                        <FontAwesomeIcon icon={faXmark} className='fw-card-X-icon'/>
+                    </button>
+                :
+                <button 
+                    className={buttonClassName} 
+                    onClick={buttonOnClick}
+                >
                     {friend?
                         <FontAwesomeIcon icon={faPlus} className='fw-card-plus-btn'/>
                         :
@@ -37,6 +48,7 @@ export function Follower({children,date}) {
                     
                 {buttonText}
                 </button>
+                }
             </aside>
             </div>
         </article>

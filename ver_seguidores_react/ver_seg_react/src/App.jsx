@@ -34,19 +34,25 @@ function App() {
         <div className=''>
           {changePages==1?
           <>
-          <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
-          <CondListFollowers follower={follower}/>
+            <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
+            <CondListFollowers follower={follower}/>
           </>
           :changePages==2?
-          <h2>Breve</h2>
+          <>
+            <h1 className='styled-h1'>Modificar Registros</h1>
+            <CondListFollowers follower={follower} addFollower={addFollower}/>
+          </>
           :changePages==3?
           <>
           <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
           <AñadirFollow follower={follower} addFollower={addFollower}/>
-          <CondListFollowers follower={follower}/>
+          <CondListFollowers follower={follower} addFollower={addFollower}/>
           </>
           :
-          <h1>JuasJuas</h1>
+          <>
+          <h1 className='styled-h1'>Eliminar Registros</h1>
+          <CondListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
+          </>
           }
         </div>
         <div className='nav-bar'>
