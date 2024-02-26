@@ -9,7 +9,7 @@ import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [follower,addFollower]=useState([]);
-  const [appearAddFanPage, editAppearFanPage]=useState(false);
+  const [appearAddFanPage, editAppearFanPage]=useState(true);
   const [nombFanPage, editNomFanPage]=useState("--FanPage--")
 
   const addFanPageBo=()=>{
@@ -19,10 +19,10 @@ function App() {
       <div className='major'>
         <div className='grid-AddFanPage-section'>
           {appearAddFanPage?
-          <AñadirFanPage 
-            addFanPageBo={addFanPageBo} 
-            editNomFanPage={editNomFanPage}
-          />
+            <AñadirFanPage 
+              addFanPageBo={addFanPageBo} 
+              editNomFanPage={editNomFanPage}
+            />
           :
           <button onClick={addFanPageBo} className='addFanPage-btn-appear'>
             <FontAwesomeIcon icon={faArrowRight} className='addFanPage-btn-apear-icon'/>

@@ -18,7 +18,7 @@ export function Follower({children,date}) {
                     className="fw-card-img"
                 />
                 <div className="fw-card-user">
-                    <strong>{children}</strong>
+                    <strong className='fw-card-user-name'>{children}</strong>
                     <input 
                         type="date" 
                         className='fw-card-date'

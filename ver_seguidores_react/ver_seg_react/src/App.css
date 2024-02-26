@@ -3,6 +3,10 @@
   justify-content: center;
   background-color: #242526;
   width: 100%;
+  transition: 0.5s text-shadow;
+}
+.fw-card:hover{
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
 }
 .follower-grid{
   display: grid;
@@ -20,6 +24,7 @@
 .fw-card-asside{
   display: flex;
   justify-content: center;
+  padding-bottom: 10px;
 }
 .fw-card-img{
   align-self: center;
@@ -31,12 +36,13 @@
 .fw-card-user{
   display: flex;
   flex-direction: column;
+  text-align: center;
   padding: 5px 0px 10px 0px;
   color: rgb(255, 255, 255);
 }
 .fw-card-plus-btn{
   color: rgb(255, 255, 255);
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .fw-card-btn-add{
   cursor: pointer;
@@ -64,11 +70,12 @@
 }
 .fw-card-date{
   background-color: #00000000;
-  color: white;
+  color: rgba(255, 255, 255, 0.233);
   border: none;
   appearance: none;
   padding-left: 0;
-  width: auto;
+  width: 80px;
+  align-self: center;
 }
 .fw-card-date::-webkit-calendar-picker-indicator {
   display: none;
@@ -166,16 +173,34 @@
   display: flex;
   text-align: center;
   margin-top: 240px;
-}
-.addFanPage-container-btn{
-  align-self: center;
-}
-.addFanPage-form{
   padding: 10px 0;
   border: 1px solid black;
   border-radius: 0px 100px 100px 0px;
   background-color: #222222;
   box-shadow: 10px 10px rgba(0, 0, 0, 0.541);
+  animation: addFanPageAnimation 1s cubic-bezier(0, 0.18, 0.57, 0.9);
+}
+.addFanPage-container-return{
+  animation: addFanPageAnimation-return 1s ease;
+}
+@keyframes addFanPageAnimation-return {
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(-500px);
+  }
+}
+@keyframes addFanPageAnimation {
+  from{
+    transform: translateX(-500px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+.addFanPage-container-btn{
+  align-self: center;
 }
 .addFanPage-label{
   color: white;

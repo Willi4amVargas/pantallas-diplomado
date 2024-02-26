@@ -3,7 +3,6 @@ import {faArrowRight,faX} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 export function AñadirFanPage({addFanPageBo, editNomFanPage}) {
     const [nomFanPage,nomFanPageInput]=useState("")
-
     const stopSendNomFanPage=(e)=>{
         e.preventDefault()
         editNomFanPage(nomFanPage)
@@ -15,7 +14,7 @@ export function AñadirFanPage({addFanPageBo, editNomFanPage}) {
         console.log(nomFanPage);
     }
     return(
-        <section className="addFanPage-container addFanPage-form">
+        <section className='addFanPage-container'>
             <div>
             <form action="" onSubmit={stopSendNomFanPage}>
                 <label htmlFor="fanPageName" className="addFanPage-label">Nombre de la Fan Page</label>
