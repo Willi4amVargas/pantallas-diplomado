@@ -1,4 +1,4 @@
-export function Cabecera({fanPage,nroSeguidores}){
+export function Cabecera({nomFanPage,nroSeguidores}){
     const seguidores=<span style={{fontWeight:"bold"}}>Seguidores</span>
     const noOneFollowing=<span style={{fontWeight:"bold", fontSize:"medium"}} className="fanPage-numb-followers">No hay seguidores :c</span>
 
@@ -7,7 +7,7 @@ export function Cabecera({fanPage,nroSeguidores}){
                 <img src="https://random.imagecdn.app/500/150" className="fanPage-img"/>
                 <div className="fanPage-text-bot-dwn">
                     <div className="fanPage-text-align-under">
-                        <span className="fanPage-name-title">{fanPage}</span>
+                        <span className="fanPage-name-title">{nomFanPage}</span>
                         {nroSeguidores>0?
                         <span className="fanPage-numb-followers">{seguidores} {nroSeguidores}</span>
                         :

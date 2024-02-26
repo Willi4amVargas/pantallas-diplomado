@@ -11,6 +11,7 @@ export function Follower({children,date}) {
 
     return(
         <article className="fw-card">
+            <div> 
             <header className="fw-card-header">
                 <img 
                     src={`https://unavatar.io/${children}`}
@@ -26,8 +27,7 @@ export function Follower({children,date}) {
                     />
                 </div>
             </header>
-            <aside className='fw-card-asside'>
-                
+            <aside className='fw-card-asside'> 
                 <button className={buttonClassName} onClick={buttonOnClick}>
                     {friend?
                         <FontAwesomeIcon icon={faPlus} className='fw-card-plus-btn'/>
@@ -37,12 +37,8 @@ export function Follower({children,date}) {
                     
                 {buttonText}
                 </button>
-                <button 
-                    className='fw-card-btn-add fw-card-btn-elim'
-                >
-                    Eliminar Seguidor
-                </button>
             </aside>
+            </div>
         </article>
     )
 }
