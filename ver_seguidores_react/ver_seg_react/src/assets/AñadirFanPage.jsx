@@ -33,7 +33,7 @@ export function AñadirFanPage({addFanPageBo, editNomFanPage}) {
             </div>
             <div className='addFanPage-container-btn'>
                 <button 
-                    onClick={addFanPageBo} 
+                    onClick={addFanPageBo}
                     className='quitAddFanPage-btn'
                 >
                     <FontAwesomeIcon icon={faX} className='quitAddFanPage-icon'/>
