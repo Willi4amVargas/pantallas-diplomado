@@ -60,13 +60,20 @@
 }
 
 .fanPage{
-  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.fanPage-text-bot-dwn{
+  background-color: #00000000;
+}
+.fanPage-text-align-under{
   display: flex;
   flex-direction: column;
 }
 .fanPage-img{
-  width: 900px;
-  height: 300px;
+  height: auto;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
 }
 .fanPage-title{
   display: flex;
@@ -78,54 +85,42 @@
 .fanPage-name-title{
   font-weight: bold;
   font-size:x-large;
-  padding-top: 15px;
+  padding-top: 8px;
   padding-bottom: 0;
-}
-.fanPage-name-title:hover{
-  padding-left: 5px;
-  text-shadow: -8px 2px rgba(49, 49, 49, 0.747);
-  transition: all 0.2s ease;
+  padding-left: 50px;
+  color: #4b4b4b;
+  text-shadow: 3px 3px #242526;
 }
 .fanPage-numb-followers{
   padding-left: 80px;
-  color: #1a1a1ac5;
+  color: #777777c7;
+  padding-bottom: 10px;
+  text-shadow: -1px 1px rgba(71, 69, 180,  0.062),-1px -1px rgba(71, 69, 180, 0.062), 1px 1px rgba(71, 69, 180,  0.062), 1px -1px rgba(71, 69, 180,  0.062);
 }
 .addFollow{
   display: flex;
   justify-content: space-around;
-  background-color: #636464;
-  padding: 3vh 0px;
+  background-color: #81818123;
+  border-radius: 10px;
+  padding: 10px 0px;
+}
+.addFollow-container-input{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 7px;
+  padding-left: 12px;
 }
 .addFollow-input{
-  background-color: #292929;
+  background-color: #3f3f3f;
   color: rgba(255, 255, 255, 0.774);
   border: none;
   border-radius: 10px 10px 0px 0px;
-  width: 300px;
+  min-width: 300px;
   height: 20px;
   outline: none;
   padding-left: 10px;
   box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
   z-index: 1;
-}
-.addFollow-container-input{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.addFollow-label{
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 2px rgb(129, 129, 129), 0 0 1em rgb(109, 109, 109), 0 0 0.2em rgb(44, 44, 44);
-  padding-bottom: 20px;
-  font-weight: bold;
-}
-.addFollow-btn{
-  background-color: rgba(255, 0, 0, 0);
-  border: none;
-}
-.addFollow-btn-icon{
-  width: 40px;
-  height: auto;
 }
 .addFollow-input-date{
   background-color: #777777;
@@ -134,6 +129,22 @@
   padding: 5px;
   box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
   z-index: 1;
+}
+.addFollow-label{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(129, 129, 129), 0 0 1em rgb(109, 109, 109), 0 0 0.2em rgb(44, 44, 44);
+  padding-bottom: 7px;
+  font-weight: bold;
+}
+.addFollow-btn{
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+}
+.addFollow-btn-icon{
+  width: 50px;
+  height: 50px;
+  color: white;
 }
 .listFollow-noFollowers{
   text-align: center;

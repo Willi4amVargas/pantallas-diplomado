@@ -37,6 +37,11 @@ export function Follower({children,date}) {
                     
                 {buttonText}
                 </button>
+                <button 
+                    className='fw-card-btn-add fw-card-btn-elim'
+                >
+                    Eliminar Seguidor
+                </button>
             </aside>
         </article>
     )

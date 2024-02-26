@@ -8,7 +8,6 @@ export function AñadirFollow({follower, addFollower}) {
     const [userDate, addUserDate]=useState("");
     const stopSending=(e)=>{
         e.preventDefault()
-        console.log("Estoy previniendo el envio :D");
         addFollower(
             [
                 ...follower,

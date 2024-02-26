@@ -1,19 +1,27 @@
 import React,{ useState } from 'react'
 import './App.css'
-import {v4 as uuidv4} from 'uuid';
 import { AñadirFollow } from './assets/AñadirFollow';
 import { Cabecera } from './assets/Cabecera';
 import { ListFollowers } from './assets/ListFollowers';
+import { AñadirFanPage } from './assets/AñadirFanPage';
 
 function App() {
   const [follower,addFollower]=useState([])
-  console.log(follower);
+  const [inicioSesion, cambiarInicioSesion]=useState(false);
+  
+  const iniciarSesion=()=>{
+    cambiarInicioSesion(!inicioSesion);
+  }
   return (
-    <>
-      <Cabecera fanPage="Cat Does pp" nroSeguidores={follower.length}/>
-      <AñadirFollow follower={follower} addFollower={addFollower}/>
-      <ListFollowers follower={follower}/>
-    </>
+      <div className='principal'>
+        <div className='babo'></div>
+        <div className='baba'>
+          <Cabecera fanPage="For Real" nroSeguidores={follower.length}/>
+          <AñadirFollow follower={follower} addFollower={addFollower}/>
+          <ListFollowers follower={follower}></ListFollowers>
+        </div>
+        <div className='brsa'></div>
+      </div>
   )
 }
 

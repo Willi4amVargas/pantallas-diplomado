@@ -6,7 +6,10 @@ export function ListFollowers({follower}) {
         {follower.length>0?
         follower.map((follow)=>{
             return(
-            <Follower key={follow.id} date={follow.date}>{follow.user}</Follower>
+            <Follower 
+                key={follow.id}
+                date={follow.date}
+            >{follow.user}</Follower>
             )
         })
         :
