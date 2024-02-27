@@ -11,7 +11,6 @@ export function AñadirFanPage({addFanPageBo, editNomFanPage}) {
 
     const editInputNomFanPage=(e)=>{
         nomFanPageInput(e.target.value)
-        console.log(nomFanPage);
     }
     return(
         <section className='addFanPage-container'>

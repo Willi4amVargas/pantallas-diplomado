@@ -1,6 +1,5 @@
 import { Follower } from "./Follower"
-
-export function ListFollowers({follower, addFollower,changePages}) {
+export function ListFollowers({follower, addFollower, changePages}) {
     const elimFollower=(id)=>{
         addFollower(follower.filter((e)=>{
             if (e.id !== id) {
@@ -10,21 +9,36 @@ export function ListFollowers({follower, addFollower,changePages}) {
             }
         }))
     }
+    const editFollower=(id,newFwName)=>{
+        addFollower(follower.map((e)=>{
+            if (e.id===id) {
+                return{...follower,user:newFwName}
+            }
+            return e;
+        }))
+    }
     return(
         <>
-        {
-        follower.map((follow)=>{
-            return(
-            <Follower 
-                key={follow.id}
-                follow={follow}
-                date={follow.date}
-                elimFollower={elimFollower}
-                changePages={changePages}
-            >{follow.user}</Follower>
-            )
-        })
-        }
+        {follower.length>0?
+            <div className='follower-grid'>
+                {
+                    follower.map((follow)=>{
+                    return(
+                    <Follower
+                        changePages={changePages}
+                        key={follow.id}
+                        follow={follow}
+                        elimFollower={elimFollower}
+                        editFollower={editFollower}
+                    >{follow.user}
+                    </Follower>
+                    )
+                    })
+                }
+            </div>
+            :
+            <h1 className="listFollow-noFollowers">No hay seguidores actualmente</h1>
+        }    
         </>
     )
 }

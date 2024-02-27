@@ -3,7 +3,7 @@ import './App.css'
 import { AñadirFollow } from './assets/AñadirFollow';
 import { Cabecera } from './assets/Cabecera';
 import { DisaAddfanPage } from './assets/DisaAddfanPage';
-import { CondListFollowers } from './assets/CondListFollowers';
+import { ListFollowers } from './assets/ListFollowers';
 
 function App() {
   const [follower,addFollower]=useState([]);
@@ -20,6 +20,9 @@ function App() {
   }
   return (
     <div className='major'>
+{/* //Seccion de Poner el Nombre de la Fan Page */}
+
+
         <div className='grid-AddFanPage-section'>
           {changePages==3?
           <DisaAddfanPage 
@@ -31,30 +34,36 @@ function App() {
           <div></div>
           }
         </div>
+{/* //Seccion del cambio de la NAV BAR */} 
+
+
         <div className=''>
           {changePages==1?
           <>
             <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
-            <CondListFollowers follower={follower}/>
+            <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
           </>
           :changePages==2?
           <>
             <h1 className='styled-h1'>Modificar Registros</h1>
-            <CondListFollowers follower={follower} addFollower={addFollower}/>
+            <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
           </>
           :changePages==3?
           <>
           <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
           <AñadirFollow follower={follower} addFollower={addFollower}/>
-          <CondListFollowers follower={follower} addFollower={addFollower}/>
+          <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
           </>
           :
           <>
           <h1 className='styled-h1'>Eliminar Registros</h1>
-          <CondListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
+          <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
           </>
           }
         </div>
+{/* //Seccion de la NAV BAR Fija para navegacion de la pagina */}
+  
+
         <div className='nav-bar'>
           <ul className='nav-bar-list'>
             <li className='nav-bar-btn-container nav-bar-btn-top'>
