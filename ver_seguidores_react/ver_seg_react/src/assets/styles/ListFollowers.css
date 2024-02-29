@@ -2,11 +2,21 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
-.listFollow-noFollowers{
+.listFollow-noFollowers_dark{
     text-align: center;
     color: aliceblue;
+    transition: color .5s ease, text-shadow .5s ease;
 }
-.listFollow-noFollowers:hover{
+.listFollow-noFollowers_ligh{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    transition: color .5s ease, text-shadow .5s ease;
+}
+.listFollow-noFollowers_dark:hover{
     text-shadow: 4px 4px black;
+    transition: 0.1s all;
+}
+.listFollow-noFollowers_ligh:hover{
+    text-shadow: 4px 4px rgb(143, 143, 143);
     transition: 0.1s all;
 }

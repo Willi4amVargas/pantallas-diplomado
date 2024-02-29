@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus,faXmark,faPencil} from '@fortawesome/free-solid-svg-icons'
 import './styles/Follower.css'
 
-export function Follower({children,follow,elimFollower, changePages, editFollower}) {
+export function Follower({children,follow,elimFollower, changePages, editFollower,themePage}) {
     const [friend,editFriend]=useState(true);
     const [editFwState, editFwStateEdit]=useState(true)
     const [newName, newEditName]=useState(follow.user);
@@ -20,8 +20,13 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
         e.preventDefault()
         editFollower(follow.id, newName)
     }
+    const fwCard=themePage?'fw-card_dark':'fw-card_ligh'
+    const fwCardUserName=themePage?'fw-card-user-name_dark':'fw-card-user-name_ligh'
+    const fwCardDate=themePage?'fw-card-date_dark':'fw-card-date_ligh'
+    const fwCardBtnEditFwIcon=themePage?'fw-card-btn-editFw-icon_dark':'fw-card-btn-editFw-icon_ligh'
+    const fwCardElimFwBtn=themePage?'fw-card-elimFw-btn_dark':'fw-card-elimFw-btn_ligh'
     return(
-        <article className="fw-card">
+        <article className={fwCard}>
             <div> 
             
                 <header className="fw-card-header">
@@ -37,13 +42,13 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                             <section className="fw-card-user">
                             <input 
                                 type='text'
-                                className='fw-card-user-name'
+                                className={fwCardUserName}
                                 disabled
                                 value={follow.user}
                             />
                             <input
                                 type="date" 
-                                className='fw-card-date'
+                                className={fwCardDate}
                                 value={follow.date}
                                 disabled 
                             />
@@ -51,7 +56,7 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                                 className='fw-card-btn-editFw' 
                                 onClick={()=>btnEditFwState()}
                             >
-                                <FontAwesomeIcon icon={faPencil} className="fw-card-btn-editFw-icon"/>
+                                <FontAwesomeIcon icon={faPencil} className={fwCardBtnEditFwIcon}/>
                             </button>
                             </section>
                             </>
@@ -81,10 +86,10 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                         </>
                         :
                         <>
-                            <strong className='fw-card-user-name'>{children}</strong>
+                            <strong className={fwCardUserName}>{children}</strong>
                             <input 
                                 type="date" 
-                                className='fw-card-date'
+                                className={fwCardDate}
                                 value={follow.date} 
                                 disabled
                             />
@@ -111,7 +116,7 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                 <div></div>
                 :
                 <button
-                    className='fw-card-elimFw-btn' 
+                    className={fwCardElimFwBtn} 
                     onClick={()=>elimFollower(follow.id)}
                 >
                     <FontAwesomeIcon icon={faXmark} className='fw-card-X-icon'/>

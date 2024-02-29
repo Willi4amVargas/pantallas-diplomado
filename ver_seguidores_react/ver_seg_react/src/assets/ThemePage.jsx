@@ -1,9 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faMoon} from '@fortawesome/free-solid-svg-icons'
-export function ThemePage() {
+import {faMoon,faSun} from '@fortawesome/free-solid-svg-icons'
+import './styles/ThemePage.css'
+
+export function ThemePage({funChangeThemePage, themePage}) {
     return(
-        <button className='changeTheme-btn'>
-            <FontAwesomeIcon icon={faMoon} className='changeTheme-btn-icon'/>
+        <>
+        {themePage?
+        <button className='changeTheme_btn-moon' onClick={funChangeThemePage}>
+            <FontAwesomeIcon icon={faMoon} className='changeTheme_btn_icon'/>
         </button>
+        :
+        <button className='changeTheme_btn-sun' onClick={funChangeThemePage}>
+            <FontAwesomeIcon icon={faSun} className='changeTheme_btn_icon'/>
+        </button>
+        }
+        </>
     )
 }

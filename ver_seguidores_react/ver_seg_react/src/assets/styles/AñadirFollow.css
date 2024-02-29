@@ -1,49 +1,110 @@
-.addFollow{
+.addFollow_dark{
     display: flex;
     justify-content: space-around;
-    background-color: #81818123;
+    background-color: var(--bg-default-dark);
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px;
-  }
-  .addFollow-container-input{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 7px;
-    padding-left: 12px;
-  }
-  .addFollow-input{
-    background-color: #3f3f3f;
-    color: rgba(255, 255, 255, 0.774);
-    border: none;
-    border-radius: 10px 10px 0px 0px;
-    min-width: 300px;
-    height: 20px;
-    outline: none;
-    padding-left: 10px;
-    box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
-    z-index: 1;
-  }
-  .addFollow-input-date{
-    background-color: #777777;
-    border: none;
-    border-radius: 0px 0px 10px 10px;
-    padding: 5px;
-    box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
-    z-index: 1;
-  }
-  .addFollow-label{
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgb(129, 129, 129), 0 0 1em rgb(109, 109, 109), 0 0 0.2em rgb(44, 44, 44);
-    padding-bottom: 7px;
-    font-weight: bold;
-  }
-  .addFollow-btn{
-    cursor: pointer;
-    background-color: rgba(255, 0, 0, 0);
-    border: none;
-  }
-  .addFollow-btn-icon{
-    width: 50px;
-    height: 50px;
-    color: white;
-  }
+    border: 1px solid black;
+    transition: background-color .5s ease, border .5s ease;
+}
+.addFollow_ligh{
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bg-default-ligh);
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid rgb(73, 73, 73);
+  padding: 10px 0px;
+  transition: background-color .5s ease, border .5s ease;
+}
+.addFollow-container-input{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 7px;
+  padding-left: 12px;
+}
+.addFollow-input_dark{
+  background-color: #3f3f3f;
+  color: rgba(255, 255, 255, 0.774);
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  min-width: 300px;
+  height: 20px;
+  text-align: center;
+  outline: none;
+  padding-left: 10px;
+  box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
+  z-index: 1;
+  transition: color .5s ease, background-color .5s ease, box-shadow .5s ease;
+}
+.addFollow-input_ligh{
+  background-color: #cccccc;
+  color: rgba(0, 0, 0, 0.774);
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  min-width: 300px;
+  height: 20px;
+  outline: none;
+  text-align: center;
+  padding-left: 10px;
+  box-shadow: -8px 5px 0px 0px rgba(0, 0, 0, 0.575);
+  z-index: 1;
+  transition: color .5s ease, background-color .5s ease, box-shadow .5s ease;
+}
+.addFollow-input-date_dark{
+  background-color: #777777;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
+  z-index: 1;
+  transition: color .5s ease, background-color .5s ease, box-shadow .5s ease;
+}
+.addFollow-input-date_ligh{
+  background-color: #afaeae;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: -8px 5px 0px 0px rgba(0, 0, 0, 0.575);
+  z-index: 1;
+  transition: color .5s ease, background-color .5s ease, box-shadow .5s ease;
+}
+.addFollow-label_dark{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(129, 129, 129), 0 0 1em rgb(109, 109, 109), 0 0 0.2em rgb(44, 44, 44);
+  padding-bottom: 7px;
+  font-weight: bold;
+  transition: color .5s ease, text-shadow .5s ease;
+}
+.addFollow-label_ligh{
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 4px rgb(151, 151, 151);
+  padding-bottom: 7px;
+  font-weight: bold;
+  transition: color .5s ease, text-shadow .5s ease;
+}
+.addFollow-btn{
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  border-radius: 99%;
+}
+.addFollow-btn-icon_dark{
+  width: 50px;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  transition: color .5s ease;
+}
+.addFollow-btn-icon_dark:hover{
+  color: rgba(56, 255, 56, 0.596);
+}
+.addFollow-btn-icon_ligh{
+  width: 50px;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  transition: color .5s ease;
+}
+.addFollow-btn-icon_ligh:hover{
+  color: rgba(39, 255, 39, 0.596);
+}

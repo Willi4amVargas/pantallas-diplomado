@@ -1,4 +1,4 @@
-.addFanPage-container{
+.addFanPage-container_dark{
     display: flex;
     text-align: center;
     margin-top: 240px;
@@ -6,43 +6,100 @@
     border: 1px solid black;
     border-radius: 0px 100px 100px 0px;
     background-color: #222222;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.541);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.541);
     animation: addFanPageAnimation 1s cubic-bezier(0, 0.18, 0.57, 0.9);
-    opacity: 1;
-    transition: opacity 2s;
+    transition: background-color .5s ease,box-shadow .5s ease;
+}
+.addFanPage-container_ligh{
+  display: flex;
+  text-align: center;
+  margin-top: 240px;
+  padding: 10px 0;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 0px 100px 100px 0px;
+  background-color: #696969;
+  box-shadow: 10px 10px 5px rgba(83, 83, 83, 0.541);
+  animation: addFanPageAnimation 1s cubic-bezier(0, 0.18, 0.57, 0.9);
+  transition: background-color .5s ease,box-shadow .5s ease;
+}
+.addFanPage-container-return{
+  animation: addFanPageAnimation-return 1s ease;
+}
+.addFanPage-container-btn{
+  align-self: center;
+}
+.quitAddFanPage-icon{
+  color: rgba(255, 0, 0, 0.322);
+  transition: color .2s ease-in;
+}
+.quitAddFanPage-icon:hover{
+  color: #ff0000c4;
+}
+.quitAddFanPage-btn{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding-right: 20px;
+}
+.addFanPage-label_dark{
+  color: white;
+  font-weight: bold;
+  text-shadow: 5px 2px rgb(41, 41, 41);
+  transition: text-shadow .5s ease, color .5s ease;
+}
+.addFanPage-label_ligh{
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  text-shadow: 5px 2px 3px rgb(124, 124, 124);
+  transition: text-shadow .5s ease, color .5s ease;
+}
+.addFanPage-input_dark{
+  color: white;
+  background-color: #555555a9;
+  border: none;
+  outline: none;
+  transition: color .5s ease, background-color .5s ease;
+}
+.addFanPage-input_ligh{
+  color: black;
+  background-color: #aaaaaaa9;
+  border: none;
+  outline: none;
+  transition: color .5s ease, background-color .5s ease;
+}
+.addFanPage-icon-btn_ligh{
+  color: rgb(0, 0, 0);
+  transition: all .5 ease;
+}
+.addFanPage-icon-btn_dark{
+  color: white;
+  transition: all .5 ease;
+}
+.addFanPage-btn_dark{
+  background-color: #555555a9;
+  border: none;
+  border-radius: 0px 50px 50px 0px;
+  transition: background-color .5s ease;
+}
+.addFanPage-btn_ligh{
+  background-color: #aaaaaaa9;
+  border: none;
+  border-radius: 0px 50px 50px 0px;
+  transition: background-color .5s ease;
+}
+@keyframes addFanPageAnimation-return {
+  from{
+    transform: translateX(0px);
   }
-  .addFanPage-container-return{
-    animation: addFanPageAnimation-return 1s ease;
+  to{
+    transform: translateX(-500px);
   }
-  @keyframes addFanPageAnimation-return {
-    from{
-      transform: translateX(0px);
-    }
-    to{
-      transform: translateX(-500px);
-    }
+}
+@keyframes addFanPageAnimation {
+  from{
+    transform: translateX(-500px);
   }
-  @keyframes addFanPageAnimation {
-    from{
-      transform: translateX(-500px);
-    }
-    to{
-      transform: translateX(0px);
-    }
+  to{
+    transform: translateX(0px);
   }
-  .addFanPage-container-btn{
-    align-self: center;
-  }
-  .quitAddFanPage-icon{
-    color: white;
-    transition: color .2s ease-in;
-  }
-  .quitAddFanPage-icon:hover{
-    color: #000000;
-  }
-  .quitAddFanPage-btn{
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    padding-right: 20px;
-  }
+}

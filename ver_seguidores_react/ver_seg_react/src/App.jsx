@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React,{  useState } from 'react'
 import './App.css'
 import { AñadirFollow } from './assets/AñadirFollow';
 import { Cabecera } from './assets/Cabecera';
@@ -9,12 +9,19 @@ import { ThemePage } from './assets/ThemePage';
 function App() {
   const [follower,addFollower]=useState([]);
   const [appearAddFanPage, editAppearFanPage]=useState(false);
-  const [themePage,changeThemePage]=useState(true);
+  const [themePage,changeThemePage]=useState(false);
   const [nombFanPage, editNomFanPage]=useState("--FanPage--");
   const [changePages, editChangesPages]=useState(1);
+  const body= document.querySelector("body")
+
 
   const funChangeThemePage=()=>{
     changeThemePage(!themePage);
+    {themePage?
+      body.style.backgroundColor = "#fefefe"
+      :
+      body.style.backgroundColor = "#1d1d1d"
+    }
   }
   const changeFunPage=(e)=>{
     editChangesPages(e);
@@ -24,6 +31,7 @@ function App() {
     editAppearFanPage(!appearAddFanPage);
   }
   return (
+
     <div className='major'>
 {/* //Seccion de Poner el Nombre de la Fan Page */}
 
@@ -34,11 +42,12 @@ function App() {
             addFanPageBo={addFanPageBo} 
             editNomFanPage={editNomFanPage}
             appearAddFanPage={appearAddFanPage}
+            themePage={themePage}
           />
           :
           <div></div>
           }
-          <ThemePage/>
+          <ThemePage funChangeThemePage={funChangeThemePage} themePage={themePage}/>
         </div>
 {/* //Seccion del cambio de la NAV BAR */} 
 
@@ -46,24 +55,56 @@ function App() {
         <div className=''>
           {changePages==1?
           <>
-            <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
-            <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
+            <Cabecera 
+              nomFanPage={nombFanPage} 
+              nroSeguidores={follower.length} 
+              themePage={themePage}
+            />
+            <ListFollowers 
+              follower={follower} 
+              addFollower={addFollower}
+              changePages={changePages} 
+              themePage={themePage}
+             />
           </>
           :changePages==2?
           <>
             <h1 className='styled-h1'>Modificar Registros</h1>
-            <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
+            <ListFollowers 
+              follower={follower} 
+              addFollower={addFollower} 
+              changePages={changePages}
+              themePage={themePage}
+            />
           </>
           :changePages==3?
           <>
-          <Cabecera nomFanPage={nombFanPage} nroSeguidores={follower.length}/>
-          <AñadirFollow follower={follower} addFollower={addFollower}/>
-          <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
+          <Cabecera 
+            nomFanPage={nombFanPage} 
+            nroSeguidores={follower.length}
+            themePage={themePage}
+          />
+          <AñadirFollow 
+            follower={follower} 
+            addFollower={addFollower}
+            themePage={themePage}
+          />
+          <ListFollowers 
+            follower={follower} 
+            addFollower={addFollower} 
+            changePages={changePages}
+            themePage={themePage}
+          />
           </>
           :
           <>
           <h1 className='styled-h1'>Eliminar Registros</h1>
-          <ListFollowers follower={follower} addFollower={addFollower} changePages={changePages}/>
+          <ListFollowers 
+            follower={follower} 
+            addFollower={addFollower} 
+            changePages={changePages}
+            themePage={themePage}
+          />
           </>
           }
         </div>
@@ -105,6 +146,7 @@ function App() {
           </ul>
         </div>
       </div>
+
   ) 
 }
 

@@ -1,3 +1,6 @@
+body{
+  background-color: var(--bg-ligh);
+}
 .grid-AddFanPage-section{
   justify-self: start;
 }
@@ -44,33 +47,4 @@
   padding: 20px 0;
   margin-top: 20px;
   text-shadow: -5px 5px 10px beige;
-}
-.changeTheme-btn{
-  cursor: pointer;
-  position: fixed;
-  bottom: 0;
-  left: 60px;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgb(37, 37, 37);
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  bottom: 10px;
-  border-radius: 100%;
-  background-color: #3f3f3f4d;
-  box-shadow: -5px 5px 5px rgb(17, 17, 17);
-  transition-property: background-color,bottom,box-shadow,border;
-  transition-duration: .2s;
-  transition-delay: .1s;
-  transition-timing-function: ease;
-}
-.changeTheme-btn:hover{
-  background-color: #6969698c;
-  bottom: 15px;
-  box-shadow: -5px 5px 5px rgb(58, 58, 58);
-  border: 1px solid rgb(56, 56, 56);
-}
-.changeTheme-btn-icon{
-  width: 100%;
-  height: 70%;
 }

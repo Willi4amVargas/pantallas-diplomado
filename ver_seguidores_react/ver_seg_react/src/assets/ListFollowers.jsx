@@ -1,6 +1,6 @@
 import { Follower } from "./Follower"
 import './styles/ListFollowers.css'
-export function ListFollowers({follower, addFollower, changePages}) {
+export function ListFollowers({follower, addFollower, changePages,themePage}) {
     const elimFollower=(id)=>{
         addFollower(follower.filter((e)=>{
             if (e.id !== id) {
@@ -18,6 +18,7 @@ export function ListFollowers({follower, addFollower, changePages}) {
             return e;
         }))
     }
+    const listFollowNoFollowers=themePage?'listFollow-noFollowers_dark':'listFollow-noFollowers_ligh'
     return(
         <>
         {follower.length>0?
@@ -31,6 +32,7 @@ export function ListFollowers({follower, addFollower, changePages}) {
                         follow={follow}
                         elimFollower={elimFollower}
                         editFollower={editFollower}
+                        themePage={themePage}
                     >{follow.user}
                     </Follower>
                     )
@@ -38,7 +40,7 @@ export function ListFollowers({follower, addFollower, changePages}) {
                 }
             </div>
             :
-            <h1 className="listFollow-noFollowers">No hay seguidores actualmente</h1>
+            <h1 className={listFollowNoFollowers}>No hay seguidores actualmente</h1>
         }    
         </>
     )

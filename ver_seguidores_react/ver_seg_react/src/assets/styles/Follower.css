@@ -1,147 +1,201 @@
-.fw-card{
+.fw-card_dark{
     display: flex;
     justify-content: center;
     background-color: #242526;
     width: 100%;
-    transition: 0.5s text-shadow;
-  }
-  .fw-card-header{
-    display: flex;
-    flex-direction: column;
-  }
-  .fw-card-asside{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-  }
-  .fw-card-img{
-    align-self: center;
-    border-radius: 999px;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-  }
-  .fw-card-user{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 5px 0px 10px 0px;
-    color: rgb(255, 255, 255);
-  }
-  .fw-card-user-name{
-    padding: 0;
-    width: 100%;
-    border: 0;
-    text-shadow: 0px 0px 4px rgb(255, 255, 255);
-    text-align: center;
-    border-radius: 10px 10px 0px 0px;
-    background-color: #86868600;
-    color: white;
-    align-self: center;
-    font-weight: bold;
-  }
-  .fw-card-user-name-edit{
-    padding: 0;
-    width: 100%;
-    border: 0;
-    text-align: center;
-    border-radius: 10px 10px 0px 0px;
-    background-color: #8686868e;
-    color: white;
-    align-self: center;
-    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.473);
-  }
-  .fw-card-X-icon{
-    color: rgb(0, 0, 0);
-    padding: 5px;
-  }
-  .fw-card-elimFw-btn{
-    cursor: pointer;
-    background-color: rgb(161, 161, 161);
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(133, 0, 0, 0);
-    border: 1px solid rgba(146, 146, 146, 0);
-    width: 100%;
-    transition-property: background-color, border,box-shadow;
-    transition-duration: .3s;
-  }
-  .fw-card-elimFw-btn:hover{
-    background-color: rgb(165, 11, 11);
-    border: rgb(255, 0, 0) solid 1px;
-    box-shadow: 3px 3px 5px rgb(133, 0, 0);
-  }
-  .fw-card-plus-btn{
-    color: rgb(255, 255, 255);
-    padding-right: 10px;
-  }
-  .fw-card-btn-add{
-    cursor: pointer;
-    background-color: #3a3b3c;
-    border: none;
-    color: rgb(255, 255, 255);
-    font-size:small;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0);
-  }
-  .fw-card-btn-add:hover{
-    border: 1px solid rgba(18, 167, 31, 0.603);
-    background-color: rgba(18, 167, 30, 0.24);
-    color: rgb(226, 209, 209);
-    transition: all 0.18s ease-in;
-  }
-  
-  .fw-card-btn-elim:hover{
-    border: 1px solid rgb(117, 0, 0);
-    border-color: rgb(117, 0, 0);
-    background-color: rgba(117, 0, 0, 0.308);
-    transition: all 0.18s ease;
-  }
-  .fw-card-date{
-    border: 0;
-    padding: 0;
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    background-color: #5c5c5c00;
-    border-radius: 0px 0px 10px 10px ;
-    color: rgba(158, 158, 158, 0.342);
-  }
-  .fw-card-date::-webkit-calendar-picker-indicator {
-    display: none;
-  }
-  .fw-card-date-enable{
-    border: 0;
-    padding: 0;
-    width: 100%;
-    align-self: center;
-    text-align: center;
-    background-color: #5c5c5c8e;
-    border-radius: 0px 0px 10px 10px ;
-    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.473);
-    color: white;
-  }
-  .fw-card-date-enable::-webkit-calendar-picker-indicator {
-    display: none;
-  }
-  .fw-card-btn-editFw{
-    margin-top: 6px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    cursor: pointer;
-    width: 40px;
-    align-self: center;
-  }
-  .fw-card-form{
-    width: 50%;
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
-  }
-  .fw-card-btn-editFw-icon{
-    color: rgb(255, 255, 255);
-    width: 100%;
-    height: 20px;
-  }
-  
+    transition: background-color .5s ease;
+}
+.fw-card_ligh{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(175, 175, 175);
+  width: 100%;
+  transition: background-color .5s ease;
+}
+.fw-card-header{
+  display: flex;
+  flex-direction: column;
+}
+.fw-card-asside{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.fw-card-img{
+  align-self: center;
+  border-radius: 999px;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+.fw-card-user{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px 0px 10px 0px;
+}
+.fw-card-user-name_dark{
+  padding: 0;
+  width: 100%;
+  border: 0;
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #86868600;
+  color: white;
+  align-self: center;
+  font-weight: bold;
+  transition: color .5s ease,background-color .5s ease,text-shadow .5s ease;
+}
+.fw-card-user-name_ligh{
+  padding: 0;
+  width: 100%;
+  border: 0;
+  text-shadow: 0px 0px 4px rgb(97, 97, 97);
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #86868600;
+  color: rgb(0, 0, 0);
+  align-self: center;
+  font-weight: bold;
+  transition: color .5s ease,background-color .5s ease,text-shadow .5s ease;
+}
+.fw-card-user-name-edit{
+  padding: 0;
+  width: 100%;
+  border: 0;
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #8686868e;
+  color: white;
+  align-self: center;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.473);
+}
+.fw-card-X-icon{
+  color: rgb(0, 0, 0);
+  padding: 5px;
+}
+.fw-card-elimFw-btn_dark{
+  cursor: pointer;
+  background-color: rgb(161, 161, 161);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(133, 0, 0, 0);
+  border: 1px solid rgba(146, 146, 146, 0);
+  width: 100%;
+  transition-property: background-color, border,box-shadow;
+  transition-duration: .3s;
+}
+.fw-card-elimFw-btn_ligh{
+  cursor: pointer;
+  background-color: var(--bg-default-ligh);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(133, 0, 0, 0);
+  border: 1px solid rgba(146, 146, 146, 0);
+  width: 100%;
+  transition-property: background-color, border,box-shadow;
+  transition-duration: .3s;
+}
+.fw-card-elimFw-btn_dark:hover{
+  background-color: rgb(165, 11, 11);
+  border: rgb(255, 0, 0) solid 1px;
+  box-shadow: 3px 3px 5px rgb(133, 0, 0);
+}
+.fw-card-elimFw-btn_ligh:hover{
+  background-color: rgb(165, 11, 11);
+  border: rgb(255, 0, 0) solid 1px;
+  box-shadow: 3px 3px 5px rgb(133, 0, 0);
+}
+.fw-card-plus-btn{
+  color: rgb(255, 255, 255);
+  padding-right: 10px;
+}
+.fw-card-btn-add{
+  cursor: pointer;
+  background-color: #3a3b3c;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size:small;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.fw-card-btn-add:hover{
+  border: 1px solid rgba(18, 167, 31, 0.603);
+  background-color: rgba(18, 167, 30, 0.24);
+  color: rgb(226, 209, 209);
+  transition: all 0.18s ease-in;
+}
+
+.fw-card-btn-elim:hover{
+  border: 1px solid rgb(117, 0, 0);
+  border-color: rgb(117, 0, 0);
+  background-color: rgba(117, 0, 0, 0.308);
+  transition: all 0.18s ease;
+}
+.fw-card-date_dark{
+  border: 0;
+  padding: 0;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  background-color: #5c5c5c00;
+  border-radius: 0px 0px 10px 10px ;
+  color: rgba(158, 158, 158, 0.342);
+  transition: color .5s ease;
+}
+.fw-card-date_ligh{
+  border: 0;
+  padding: 0;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  background-color: #5c5c5c00;
+  border-radius: 0px 0px 10px 10px ;
+  color: rgba(0, 0, 0, 0.493);
+  transition: color .5s ease;
+}
+.fw-card-date::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.fw-card-date-enable{
+  border: 0;
+  padding: 0;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  background-color: #5c5c5c8e;
+  border-radius: 0px 0px 10px 10px ;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.473);
+  color: white;
+}
+.fw-card-date-enable::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.fw-card-btn-editFw{
+  margin-top: 6px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  align-self: center;
+}
+.fw-card-form{
+  width: 50%;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+.fw-card-btn-editFw-icon_dark{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 20px;
+  transition: color .5s ease;
+}
+.fw-card-btn-editFw-icon_ligh{
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 20px;
+  transition: color .5s ease;
+}
+
