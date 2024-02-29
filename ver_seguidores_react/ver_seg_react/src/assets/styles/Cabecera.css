@@ -1,0 +1,31 @@
+.fanPage{
+    display: flex;
+    flex-direction: column;
+}
+.fanPage-text-bot-dwn{
+    background-color: #00000000;
+}
+.fanPage-text-align-under{
+    display: flex;
+    flex-direction: column;
+}
+.fanPage-img{
+    height: auto;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+}
+.fanPage-name-title{
+    font-weight: bold;
+    font-size:x-large;
+    padding-top: 8px;
+    padding-bottom: 0;
+    padding-left: 50px;
+    color: #ffffff;
+    text-shadow: 5px 5px #000000;
+}
+.fanPage-numb-followers{
+    padding-left: 80px;
+    color: #777777c7;
+    padding-bottom: 10px;
+    text-shadow: -1px 1px rgba(71, 69, 180,  0.062),-1px -1px rgba(71, 69, 180, 0.062), 1px 1px rgba(71, 69, 180,  0.062), 1px -1px rgba(71, 69, 180,  0.062);
+}

@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight,faX} from '@fortawesome/free-solid-svg-icons'
+import './styles/AñadirFanPage.css'
 import { useState } from 'react'
 export function AñadirFanPage({addFanPageBo, editNomFanPage}) {
     const [nomFanPage,nomFanPageInput]=useState("")

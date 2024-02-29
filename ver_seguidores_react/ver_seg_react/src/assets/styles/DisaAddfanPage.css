@@ -1,0 +1,40 @@
+.addFanPage-label{
+    color: white;
+    font-weight: bold;
+  }
+  .addFanPage-label:hover{
+    text-shadow: 5px 2px black;
+    transition: text-shadow 0.5s;
+  }
+  .addFanPage-input{
+    color: white;
+    background-color: #555555a9;
+    border: none;
+    outline: none;
+  }
+  .addFanPage-icon-btn{
+    color: white;
+  }
+  .addFanPage-btn{
+    background-color: #555555a9;
+    border: none;
+    border-radius: 0px 50px 50px 0px;
+  }
+  .addFanPage-btn-appear{
+    cursor: pointer;
+    background-color: #00000000;
+    border: none;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin-top: 250px;
+  }
+  .addFanPage-btn-apear-icon{
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    transition: color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .addFanPage-btn-apear-icon:hover{
+    color: #646464;
+  }

@@ -1,4 +1,5 @@
 import { Follower } from "./Follower"
+import './styles/ListFollowers.css'
 export function ListFollowers({follower, addFollower, changePages}) {
     const elimFollower=(id)=>{
         addFollower(follower.filter((e)=>{

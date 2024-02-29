@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus,faXmark,faPencil} from '@fortawesome/free-solid-svg-icons'
+import './styles/Follower.css'
 
 export function Follower({children,follow,elimFollower, changePages, editFollower}) {
     const [friend,editFriend]=useState(true);
@@ -14,6 +15,10 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
     }
     const btnEditFwState=()=>{
         editFwStateEdit(!editFwState);
+    }
+    const stopSendEditFw = (e)=>{
+        e.preventDefault()
+        editFollower(follow.id, newName)
     }
     return(
         <article className="fw-card">
@@ -51,8 +56,7 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                             </section>
                             </>
                             :
-                            <>
-                            <form action="" className='fw-card-user'>
+                            <form action="" className='fw-card-user' onSubmit={stopSendEditFw}>
                             <input 
                                 type='text'
                                 className='fw-card-user-name-edit'
@@ -73,7 +77,6 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                             </button>
                             </form>
                             
-                            </>
                         }  
                         </>
                         :

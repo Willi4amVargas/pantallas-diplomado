@@ -4,13 +4,18 @@ import { AñadirFollow } from './assets/AñadirFollow';
 import { Cabecera } from './assets/Cabecera';
 import { DisaAddfanPage } from './assets/DisaAddfanPage';
 import { ListFollowers } from './assets/ListFollowers';
+import { ThemePage } from './assets/ThemePage';
 
 function App() {
   const [follower,addFollower]=useState([]);
   const [appearAddFanPage, editAppearFanPage]=useState(false);
+  const [themePage,changeThemePage]=useState(true);
   const [nombFanPage, editNomFanPage]=useState("--FanPage--");
   const [changePages, editChangesPages]=useState(1);
 
+  const funChangeThemePage=()=>{
+    changeThemePage(!themePage);
+  }
   const changeFunPage=(e)=>{
     editChangesPages(e);
   }
@@ -33,6 +38,7 @@ function App() {
           :
           <div></div>
           }
+          <ThemePage/>
         </div>
 {/* //Seccion del cambio de la NAV BAR */} 
 

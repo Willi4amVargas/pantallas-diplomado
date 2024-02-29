@@ -2,6 +2,7 @@ import {faAddressBook} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react';
 import {v4 as uuidv4} from 'uuid';
+import './styles/AñadirFollow.css'
 
 export function AñadirFollow({follower, addFollower}) {
     const [nameFollower,addNameFollower]=useState("");

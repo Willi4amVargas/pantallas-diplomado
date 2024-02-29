@@ -1,3 +1,4 @@
+import './styles/Cabecera.css'
 export function Cabecera({nomFanPage,nroSeguidores}){
     const seguidores=<span style={{fontWeight:"bold"}}>Seguidores</span>
     const noOneFollowing=<span style={{fontWeight:"bold", fontSize:"medium"}} className="fanPage-numb-followers">No hay seguidores :c</span>

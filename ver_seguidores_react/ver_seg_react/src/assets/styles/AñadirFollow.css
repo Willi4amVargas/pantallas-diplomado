@@ -1,0 +1,49 @@
+.addFollow{
+    display: flex;
+    justify-content: space-around;
+    background-color: #81818123;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px;
+  }
+  .addFollow-container-input{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7px;
+    padding-left: 12px;
+  }
+  .addFollow-input{
+    background-color: #3f3f3f;
+    color: rgba(255, 255, 255, 0.774);
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    min-width: 300px;
+    height: 20px;
+    outline: none;
+    padding-left: 10px;
+    box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
+    z-index: 1;
+  }
+  .addFollow-input-date{
+    background-color: #777777;
+    border: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px;
+    box-shadow: -8px 5px 0px 0px rgba(53, 53, 53, 0.575);
+    z-index: 1;
+  }
+  .addFollow-label{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(129, 129, 129), 0 0 1em rgb(109, 109, 109), 0 0 0.2em rgb(44, 44, 44);
+    padding-bottom: 7px;
+    font-weight: bold;
+  }
+  .addFollow-btn{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+  }
+  .addFollow-btn-icon{
+    width: 50px;
+    height: 50px;
+    color: white;
+  }

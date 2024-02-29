@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import { AñadirFanPage } from './AñadirFanPage';
+import './styles/DisaAddfanPage.css'
 export function DisaAddfanPage ({addFanPageBo,editNomFanPage,appearAddFanPage}) {
     return(
         <>

@@ -1,0 +1,12 @@
+.follower-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.listFollow-noFollowers{
+    text-align: center;
+    color: aliceblue;
+}
+.listFollow-noFollowers:hover{
+    text-shadow: 4px 4px black;
+    transition: 0.1s all;
+}
