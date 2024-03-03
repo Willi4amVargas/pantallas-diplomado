@@ -34,8 +34,7 @@ function App() {
 
     <div className='major'>
 {/* //Seccion de Poner el Nombre de la Fan Page */}
-
-
+        {console.log(...follower)}
         <div className='grid-AddFanPage-section'>
           {changePages==3?
           <DisaAddfanPage 

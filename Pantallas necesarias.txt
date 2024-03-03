@@ -5,7 +5,7 @@ Seguidor{
 	-Fan Page(NEC)
 	-Estatus(NEC)
 }
-Publicacion{
+Publicacion Empresarial{
 	-Codigo Publicacion(NEC)
 	-Fecha de publicacion(NEC)
 	-Titulo de la publicacion(NEC)

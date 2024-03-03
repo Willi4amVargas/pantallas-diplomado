@@ -43,6 +43,8 @@ export function AñadirFollow({follower, addFollower,themePage}) {
                     name='user'
                     id="user" 
                     type="text" 
+                    autoComplete="off"
+                    maxLength={20}
                     className={addFollowInput}
                     value={nameFollower}
                     onChange={changeInputValue}

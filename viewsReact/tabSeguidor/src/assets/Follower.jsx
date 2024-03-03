@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus,faXmark,faPencil} from '@fortawesome/free-solid-svg-icons'
 import './styles/Follower.css'
 
 export function Follower({children,follow,elimFollower, changePages, editFollower,themePage}) {
     const [friend,editFriend]=useState(true);
-    const [editFwState, editFwStateEdit]=useState(true)
+    const [editFwState, editFwStateEdit]=useState(false)
     const [newName, newEditName]=useState(follow.user);
     const [newDate, newEditDate]=useState(follow.date);
     const buttonText=friend?"Añadir Amigo":"Eliminar Amigo"
@@ -17,7 +17,7 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
         editFwStateEdit(!editFwState);
     }
     const stopSendEditFw = (e)=>{
-        e.preventDefault()
+        /* e.preventDefault() */
         editFollower(follow.id, newName)
     }
     const fwCard=themePage?'fw-card_dark':'fw-card_ligh'
@@ -54,14 +54,14 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                             />
                             <button
                                 className='fw-card-btn-editFw' 
-                                onClick={()=>btnEditFwState()}
+                                onClick={()=>{stopSendEditFw(),btnEditFwState()}}
                             >
                                 <FontAwesomeIcon icon={faPencil} className={fwCardBtnEditFwIcon}/>
                             </button>
                             </section>
                             </>
                             :
-                            <form action="" className='fw-card-user' onSubmit={stopSendEditFw}>
+                            <>
                             <input 
                                 type='text'
                                 className='fw-card-user-name-edit'
@@ -77,10 +77,10 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
                             <button
                                 type='submit'
                                 className='fw-card-btn-editFw' 
-                                onClick={()=>btnEditFwState()}>
+                                onClick={()=>{stopSendEditFw(),btnEditFwState()}}>
                                 <FontAwesomeIcon icon={faPencil} className='fw-card-btn-editFw-icon'/>
                             </button>
-                            </form>
+                            </>
                             
                         }  
                         </>

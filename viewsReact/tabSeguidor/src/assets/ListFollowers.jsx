@@ -1,5 +1,6 @@
 import { Follower } from "./Follower"
 import './styles/ListFollowers.css'
+
 export function ListFollowers({follower, addFollower, changePages,themePage}) {
     const elimFollower=(id)=>{
         addFollower(follower.filter((e)=>{
@@ -27,8 +28,8 @@ export function ListFollowers({follower, addFollower, changePages,themePage}) {
                     follower.map((follow)=>{
                     return(
                     <Follower
-                        changePages={changePages}
                         key={follow.id}
+                        changePages={changePages}
                         follow={follow}
                         elimFollower={elimFollower}
                         editFollower={editFollower}
