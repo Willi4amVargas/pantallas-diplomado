@@ -18,7 +18,7 @@ function App() {
   const funChangeThemePage=()=>{
     changeThemePage(!themePage);
     {themePage?
-      body.style.backgroundColor = "#fefefe"
+      body.style.backgroundColor = "#d8d8d8"
       :
       body.style.backgroundColor = "#1d1d1d"
     }
@@ -34,7 +34,6 @@ function App() {
 
     <div className='major'>
 {/* //Seccion de Poner el Nombre de la Fan Page */}
-        {console.log(...follower)}
         <div className='grid-AddFanPage-section'>
           {changePages==3?
           <DisaAddfanPage 
