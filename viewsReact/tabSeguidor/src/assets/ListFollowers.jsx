@@ -11,10 +11,10 @@ export function ListFollowers({follower, addFollower, changePages,themePage}) {
             }
         }))
     }
-    const editFollower=(id,newFwName)=>{
+    const editFollower=(id,newFwName,newFwDate)=>{
         addFollower(follower.map((e)=>{
             if (e.id===id) {
-                return{...follower,user:newFwName}
+                return{...follower,user:newFwName,date:newFwDate}
             }
             return e;
         }))

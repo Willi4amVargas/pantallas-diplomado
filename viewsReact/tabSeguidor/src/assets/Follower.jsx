@@ -18,7 +18,7 @@ export function Follower({children,follow,elimFollower, changePages, editFollowe
     }
     const stopSendEditFw = (e)=>{
         /* e.preventDefault() */
-        editFollower(follow.id, newName)
+        editFollower(follow.id, newName,newDate)
     }
     const fwCard=themePage?'fw-card_dark':'fw-card_ligh'
     const fwCardUserName=themePage?'fw-card-user-name_dark':'fw-card-user-name_ligh'
